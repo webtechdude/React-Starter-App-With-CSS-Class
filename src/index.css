@@ -25,12 +25,14 @@ code {
   --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
   --text: var(--gray6);
   --border-color: var(--blue);
+  --nav-border-btm: -2px 0 5px var(--gray5)
 }
 
 
 .dark {
   --bg: var(--gray5);
   --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+  --nav-border-btm: -2px 0 5px var(--gray1) --text: var(--gray0);
   --text: var(--gray0);
   --border-color: var(--purple);
 }
@@ -48,4 +50,9 @@ body {
 
 #number {
   border: 2px solid var(--border-color);
+}
+
+.navbar {
+  background: var(--bg-nav);
+  box-shadow: var(--nav-border-btm);
 }

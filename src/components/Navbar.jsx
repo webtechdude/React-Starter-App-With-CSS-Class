@@ -1,12 +1,14 @@
 import navLogo from "../navLogo.png"
 import '../index.css'
 import { Link } from "react-router-dom"
+import sun from "../pics/sun.png"
+import moon from "../pics/moon.png"
 
 
 
 const Navbar = ({handleClick, isDarkModeEnabled}) => {
     return (
-        <nav className={`navbar ${isDarkModeEnabled ? "navbar-dark" : ""} navbar-expand-lg bg-${isDarkModeEnabled ? "dark" : "light"}`}>
+        <nav className={`navbar ${isDarkModeEnabled ? "navbar-dark" : ""} navbar-expand-lg`}>
             <div className="container-fluid">
                 <a className="navbar-brand" href=".">
                     <img src={navLogo} alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
@@ -24,8 +26,7 @@ const Navbar = ({handleClick, isDarkModeEnabled}) => {
                             <Link className="nav-link" to="/container">Container</Link>
                         </li>
                     </ul>
-                    <button className={`btn btn-outline-${isDarkModeEnabled ? "light" : "dark"}`} onClick={handleClick}>Enable {isDarkModeEnabled ? "Light" : "Dark"} Mode
-                    </button>
+                    <button className={`btn btn-outline-${isDarkModeEnabled ? "light" : "dark"}`} onClick={handleClick}><img style={{height: "50px", width: "50px"}} src={isDarkModeEnabled ? sun : moon} alt={isDarkModeEnabled ? "Enable Light" : "Enable Dark"} /></button>
                 </div>
             </div>
         </nav >
