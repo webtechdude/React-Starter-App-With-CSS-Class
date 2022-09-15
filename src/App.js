@@ -26,7 +26,7 @@ function App() {
       <Navbar handleClick={handleClick} isDarkModeEnabled={isDarkModeEnabled}  />
       <Routes>
         <Route path='/' element={< Home />} />
-        <Route path='/container' element={<Container />} />
+        <Route path='/container' element={<Container isDarkProp={isDarkModeEnabled} />}/>
       </Routes>
     </>
   );

@@ -25,7 +25,8 @@ code {
   --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
   --text: var(--gray6);
   --border-color: var(--blue);
-  --nav-border-btm: -2px 0 5px var(--gray5)
+  --nav-border-btm: -2px 0 5px var(--gray5);
+  --text-para-shadow: 0 0 8px var(--gray4);
 }
 
 
@@ -35,6 +36,7 @@ code {
   --nav-border-btm: -2px 0 5px var(--gray1);
   --text: var(--gray0);
   --border-color: var(--purple);
+  --text-para-shadow: 0 0 8px var(--gray2);
 }
 
 body {
@@ -48,6 +50,11 @@ body {
   background-color: var(--bg);
 }
 
+#counter-box {
+  box-shadow: var(--text-para-shadow);
+  padding: 4rem 8rem;
+}
+
 #number {
   border: 2px solid var(--border-color);
 }
@@ -55,4 +62,10 @@ body {
 .navbar {
   background: var(--bg-nav);
   box-shadow: var(--nav-border-btm);
+}
+
+.textPara {
+  box-shadow: var(--text-para-shadow);
+  padding: 4rem 8rem;
+  min-height: 15rem;
 }
